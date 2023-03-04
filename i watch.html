@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>Apple Watch</title>
+    </head>
+<style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+    *    
+   {
+    margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family:'poppins' sans-serif;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100hv;
+        background-image: linear-gradient(to bottom, #454344,#c7c3c3,#454344) ;
+    }
+    .card{
+        position: relative;
+        width: 300px;
+        height: 450px;
+        background: #fff;
+        transform-style:flat;
+            
+        transition: 1s;
+        
+    }
+    .card:hover{
+        transform: perspective(2000px) translateX(50%);
+    }
+    .card .cover{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        transition: 1s;
+        animation-timing-function: ease-in-out;
+        transform-origin: left;
+    }
+    .card:hover .cover{
+        transform: rotatey(-180deg);
+    }
+    .card .cover img{
+        max-width: 100%;
+        z-index: 1;
+    }
+    .card .cover:before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        background: #fff;
+        height: 150%;
+        transform: rotate(33.8deg);
+        box-shadow: 0 0 0 20px #e82e7a;
+        transition: 0.5s;
+        transition-delay: 1s;
+    }
+    .card:hover .cover::before{
+        width: 0;
+        box-shadow: 0 0 0 250px #e82e7a;
+        transform: rotate(145deg);
+    }
+    .card .details{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    text-align-last: center;
+    }
+    .card .details h3{
+        font-weight: 500;
+        margin: 5px 0;
+        
+    }
+    .card .details h2{
+        font-size: 1.5em;
+        font-weight: 600;
+        color: #e82a5b;
+    }
+    .card .details a{
+        text-decoration: none;
+        display: inline-block;
+        background: #47bfce;
+        color: aliceblue;
+        padding: 8px 20px;
+        margin-top: 5px;
+        letter-spacing: 1px;
+        border-radius: 25px;
+        font-weight: 500;
+        
+    }
+     
+   
+    
+    </style>
+    <body>
+        
+    <div class="card">
+        <div class="cover">
+        <img src="src6.webp" style="height: 300px">
+        </div>
+        <div class="details">
+            <div>
+            <img src="src1.png" style="height: 300px">
+                <h3> New Apple Watch</h3>
+                <h2><sub>$</sub>450</h2>
+                <a href="#">Buy Now</a>
+            
+            </div>
+        </div>
+        </div>
+    </body>
+    
+    </html>
